@@ -62,7 +62,7 @@ if ( !class_exists( 'WPPolskaMainClass' ) ) {
 				'capability_type'		=> 'post',
 				'has_archive'			=> true,
 				'menu_position'			=> 30,
-				'taxonomies'			=> array( 'wppolska_city' ),
+				'taxonomies'			=> array( 'wppolska_event_city', 'wppolska_event_type' ),
 				'supports'				=> array( 'title', 'editor', 'author', 'excerpt', 'comments', 'revisions', 'thumbnail', 'post-formats', 'custom-fields' )
 			);
 
@@ -97,7 +97,7 @@ if ( !class_exists( 'WPPolskaMainClass' ) ) {
 				'capability_type'		=> 'post',
 				'has_archive'			=> true,
 				'menu_position'			=> 30,
-				'taxonomies'			=> array( 'wppolska_topic' ),
+				'taxonomies'			=> array( 'wppolska_talk_tag' ),
 				'supports'				=> array( 'title', 'editor', 'author', 'excerpt', 'comments', 'revisions', 'thumbnail', 'post-formats', 'custom-fields' )
 			);
 
@@ -108,20 +108,26 @@ if ( !class_exists( 'WPPolskaMainClass' ) ) {
 
 		public function wppolska_register_ctax()
 		{
-			$labelsCity = array(
-				'name'              => 'Cities',
-				'singular_name'     => 'City',
-				'menu_name'         => 'Cities',
+			$labelsEventCity = array(
+				'name'              => 'Event Cities',
+				'singular_name'     => 'Event City',
+				'menu_name'         => 'Event Cities',
 			);
 
-			$labelsTopic = array(
-				'name'              => 'Topics',
-				'singular_name'     => 'Topic',
-				'menu_name'         => 'Topics',
+			$labelsEventType = array(
+				'name'              => 'Event Types',
+				'singular_name'     => 'Event Type',
+				'menu_name'         => 'Event Types',
 			);
 
-			$argsCity = array(
-				'labels'			=> $labelsCity,
+			$labelsTalkTag = array(
+				'name'              => 'Talk Tags',
+				'singular_name'     => 'Talk Tag',
+				'menu_name'         => 'Talk Tags',
+			);
+
+			$argsEventCity = array(
+				'labels'			=> $labelsEventCity,
 				'public'			=> true,
 				'show_ui'			=> true,
 				'show_in_nav_menus' => true,
@@ -131,19 +137,31 @@ if ( !class_exists( 'WPPolskaMainClass' ) ) {
 				'rewrite'			=> array( 'slug' => __( 'event_city', WPPOLSKA_TEXT_DOMAIN ) ),
 			);
 
-			$argsTopic = array(
-				'labels'			=> $labelsTopic,
+			$argsEventType = array(
+				'labels'			=> $labelsEventType,
 				'public'			=> true,
 				'show_ui'			=> true,
 				'show_in_nav_menus' => true,
 				'show_tagcloud'		=> true,
 				'show_admin_column'	=> true,
 				'query_var'			=> true,
-				'rewrite'			=> array( 'slug' => __( 'talk_topic', WPPOLSKA_TEXT_DOMAIN ) ),
+				'rewrite'			=> array( 'slug' => __( 'event_type', WPPOLSKA_TEXT_DOMAIN ) ),
 			);
 
-			register_taxonomy( 'wppolska_city', 'wppolska_event', $argsCity );
-			register_taxonomy( 'wppolska_topic', 'wppolska_talk', $argsTopic );
+			$argsTalkTag = array(
+				'labels'			=> $labelsTalkTag,
+				'public'			=> true,
+				'show_ui'			=> true,
+				'show_in_nav_menus' => true,
+				'show_tagcloud'		=> true,
+				'show_admin_column'	=> true,
+				'query_var'			=> true,
+				'rewrite'			=> array( 'slug' => __( 'talk_tag', WPPOLSKA_TEXT_DOMAIN ) ),
+			);
+
+			register_taxonomy( 'wppolska_event_city', 'wppolska_event', $argsEventCity );
+			register_taxonomy( 'wppolska_event_type', 'wppolska_event', $argsEventType );
+			register_taxonomy( 'wppolska_talk_tag', 'wppolska_talk', $argsTalkTag );
 		}
 
 	}
