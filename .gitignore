@@ -92,6 +92,8 @@ wp-content/*
 !wp-content/themes/
  
 # ignore these plugins
+wp-content/plugins/akismet/
+wp-content/plugins/buddypress/
 wp-content/plugins/hello.php
  
 # ignore specific themes
