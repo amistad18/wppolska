@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPPolska Facebook Event Importer\n"
+"POT-Creation-Date: 2015-04-18 18:16+0100\n"
+"PO-Revision-Date: 2015-04-18 18:22+0100\n"
+"Last-Translator: Jakub Mikita <kuba@wordpressgeeks.co.uk>\n"
+"Language-Team: Kuba Mikita <hello@underdev.it>\n"
+"Language: Polski\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../fbimp.php:73
+msgid ""
+"Please install WPPolska Main plugin before activating WPPolska Facebook "
+"Importer!"
+msgstr ""
+"Przed włączeniem WPPolska Facebook Importer włącz najpierw wtyczkę WPPolska "
+"Main!"
+
+#: ../fbimp.php:80
+msgid ""
+"WPPolska Facebook Importer uses Facebook PHP SDK which requires PHP 5.4 or "
+"greater"
+msgstr ""
+"WPPolska Facebook Importer używa biblioteki Facebook PHP SDK, która wymaga "
+"PHP w wersji 5.4 lub wyższej"
+
+#: ../fbimp.php:88 ../templates/importer.php:15
+msgid "Facebook Event Importer"
+msgstr "Importer wydarzeń z Facebook"
+
+#: ../fbimp.php:88
+msgid "FB Importer"
+msgstr "FB Importer"
+
+#: ../fbimp.php:207
+#, php-format
+msgid "Event imported successfuly. Go to <a href=\"%s\">events</a>"
+msgstr ""
+"Wydarzenie zaimportowane pomyślnie. Zobacz  <a href=\"%s\">wydarzenia</a>"
+
+#: ../fbimp.php:209
+msgid "Provided URL is wrong. Please make sure it's pointing to FB event"
+msgstr ""
+"Podany adres jest zły. Upewnij się, że prowadzi on do wydarzenia na Facebook"
+
+#: ../fbimp.php:211
+msgid "Did you provided valid event? Doesn't look like"
+msgstr "Podałeś poprawne wydarzenie? Nie wygląda na takie"
+
+#: ../fbimp.php:213
+#, php-format
+msgid "This event seems to be added already. <a href=\"%s\">Please check</a>"
+msgstr ""
+"Wygląda jakby to wydarzenie było już dodane. <a href=\"%s\">Upewnij się</a>"
+
+#: ../fbimp.php:215
+msgid ""
+"There is something wrong with Facebook conection or you have provided wrong "
+"Event URL or ID. Please try again"
+msgstr ""
+"Coś jest nie tak z połączeniem z Facebook lub podałeś zły URL lub ID "
+"wydarzenia. Spróbuj ponownie"
+
+#: ../templates/importer.php:26
+msgid "Event URL or ID"
+msgstr "URL lub ID wydarzenia"
+
+#: ../templates/importer.php:31
+msgid "Event Type"
+msgstr "Typ wydarzenia"
+
+#: ../templates/importer.php:42
+msgid "Add Event"
+msgstr "Dodaj wydarzenie"
